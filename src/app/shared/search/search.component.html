@@ -1,0 +1,18 @@
+<h1 class="text-center text-3xl font-bold">Search for weather</h1>
+    <div class="h-px bg-green-600 mx-2"></div>
+    <div class="w-full flex justify-center mt-5">
+      <input
+    #search
+    (keyup.enter)="searchPlaces(search.value)"
+    class="p-3 border-4 w-2/3 rounded-md border-green-200 transition-all focus:border-green-600 focus:bg-green-600 focus:text-white focus:shadow-lg focus:shadow-green-600 outline-none"
+    type="text"
+    name="Search"
+    id="Search">
+    </div>
+    <div class="w-full flex justify-center mt-5">
+      <button
+      (click)="searchPlaces(search.value)"
+      class="p-3 bg-green-200 rounded-md hover:p-4 hover:bg-green-600 hover:text-white transition-all">
+      Search for the weather</button>
+    </div>
+

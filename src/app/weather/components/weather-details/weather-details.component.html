@@ -1,0 +1,39 @@
+<h1 class="text-center text-3xl font-bold ">Weather details</h1>
+    <div class="h-px bg-green-600 mx-2"></div>
+    @if (weather) {
+      <div class="m-5 p-3 w-5/7 border-2 border-green-200 rounded-md grid md:grid-cols-4 animate__animated animate__slideInRight">
+        <div class="md:col-span-3">
+          <p>{{weather.name}} (Latitud: {{weather.coord.lat}} - Longitud: {{weather.coord.lon}})</p>
+          <p>Date: {{getFormatedDate()}}</p>
+          <p>Hour: {{getHour()}}</p>
+        </div>
+        <div class="flex md:justify-end align-top col">
+          <p class="font-semibold">{{weather.weather[0].main}}</p>
+        </div>
+        <div class="md:col-span-4 flex mx-auto">
+          <div class="text-center">
+            <p class="text-5xl font-bold">{{changeKelvin(weather.main.temp)}}ºC</p>
+            <p class="text-gray-600">Minimum: {{changeKelvin(weather.main.temp_min)}}ºC - Max: {{changeKelvin(weather.main.temp_max)}}ºC</p>
+            <p class="text-gray-600">Termic sensation: {{changeKelvin(weather.main.feels_like)}}ºC</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-around md:col-span-4">
+            <span class="text-gray-600 flex align-middle">
+
+              <span class="material-symbols-outlined">
+                airwave
+                </span>: {{weather.wind.speed}}km/h
+            </span>
+            <span class="text-gray-600 flex align-middle">
+              <span class="material-symbols-outlined">
+                water_drop
+                </span>: {{weather.main.humidity}}%
+            </span>
+            <span class="text-gray-600 flex align-middle">
+              <span class="material-symbols-outlined">
+                weight
+                </span>: {{weather.main.pressure}}Pa
+            </span>
+        </div>
+      </div>
+    }

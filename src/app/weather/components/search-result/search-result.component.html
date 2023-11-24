@@ -1,0 +1,14 @@
+<div class="mx-10 p-5">
+
+  @for (feature of features; track $index) {
+    <button
+    (click)="setWeather(feature.geometry.coordinates[1].toString() ,feature.geometry.coordinates[0].toString())"
+    [ngClass]="{'bg-green-300':$index%2==0,'bg-green-200':$index%2!=0}"
+    class="p-3  w-full text-left rounded-md hover:bg-green-800 hover:text-white transition-all animate__animated animate__slideInLeft animate__delay-.{{$index}}s">
+    <span>{{feature.place_name}}</span>
+    </button>
+  }
+
+
+
+</div>

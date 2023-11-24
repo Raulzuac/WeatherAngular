@@ -1,0 +1,11 @@
+
+
+<div class="grid md:grid-cols-2">
+  <div class="animate__animated animate__slideInLeft mb-5">
+    <app-search></app-search>
+    <app-search-result [features]="getLocations()"></app-search-result>
+  </div>
+  <div class="animate__animated animate__slideInRight">
+    <app-weather-details [weather]="getWeather()"></app-weather-details>
+  </div>
+</div>

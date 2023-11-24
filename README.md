@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Important information
 
-read the readme.txt in src/app/myInfo to make the proyect run correctly before following all the bellow steps
+Read the readme.txt in src/app/myInfo to make the proyect run correctly before following all the bellow steps
 
 ## Development server
 
